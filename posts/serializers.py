@@ -36,7 +36,7 @@ class PostSerializer(serializers.ModelSerializer):
         if user.is_authenticated:
             like = Like.objects.filter(
                 owner=user, post=obj
-            ).first() 
+            ).first()
             return like.id if like else None
         return None
 
